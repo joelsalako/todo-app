@@ -1,0 +1,89 @@
+@import '../styles/variables.scss';
+
+header.main{
+    display: flex;
+    flex-direction: column;    
+    margin: 15px;
+
+    .brand{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 0.3rem $border-color;       
+
+        .app-name{
+            display: flex;
+
+            svg{
+                font-size: 50px;
+                color: $icon-color; 
+                margin-right: 10px;  
+                
+                @include breakpoint-xs{
+                    font-size: 60px;
+                }
+
+                @include breakpoint-sm{
+                    font-size: 70px;
+                }
+
+                @include breakpoint-md{
+                    font-size: 80px;
+                }
+            }
+
+            div.app-title{
+                margin: 0;
+                font-family: $title-font;
+                font-size: 30px;
+                font-weight: normal;
+                color: $secondary-color;
+
+                @include breakpoint-xs{
+                    font-size: 36px;
+                }
+
+                @include breakpoint-sm{
+                    font-size: 42px;
+                }
+
+                @include breakpoint-md{
+                    font-size: 50px;
+                }
+            }
+        }
+
+        p{
+            font-size: 16px; 
+            
+            @include breakpoint-xs{
+                font-size: 24px;
+            }
+
+            @include breakpoint-sm{
+                font-size: 32px;
+            }
+
+            @include breakpoint-md{
+                font-size: 40px;
+            }
+        }
+    }
+
+    h1{
+        margin-left: auto;
+        margin-right: auto;
+
+        @include breakpoint-xs{
+            font-size: 36px;
+        }
+
+        @include breakpoint-sm{
+            font-size: 42px;
+        }
+
+        @include breakpoint-md{
+            font-size: 50px;
+        }
+    }
+}

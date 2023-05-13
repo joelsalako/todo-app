@@ -1,0 +1,26 @@
+@import '../../components/styles/variables.scss';
+
+main.page {
+    .container {        
+        .help-container {               
+
+            a{  
+                display: block;                       
+                font-size: 1rem; 
+                text-decoration: none;  
+                
+                &.active {
+                    color: blue;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    border-left: solid 0.2rem green;
+                }
+                &:hover{
+                    color: red;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        
+    }
+}

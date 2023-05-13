@@ -1,0 +1,76 @@
+@import '../styles/variables.scss';
+
+.task-form-component{
+    padding: 2rem;
+    color: $text-color;  
+    
+    @include breakpoint-xs{
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;        
+    }
+
+    &>div{
+        margin-bottom: 1rem;        
+    }
+
+    input[type='text'],    
+    select {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+        color: $text-color;
+        border: solid 1px $border-color;
+    }
+
+    .add-container{
+        // some codes here
+        button{
+            background-color: $secondary-color;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .form-validation{
+        color: $danger-color;
+        border: solid 1px $danger-color;
+        border-left-width: 7px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        font-size: 0.8rem;
+
+        ul{
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: normal;
+
+            li{
+                list-style: circle;
+                list-style-position: inside;
+                padding: 0 0 0 10px;
+                margin: 5px 0 0;
+            }
+        }        
+    }
+    .success-message{
+        color: $success-color;
+        border: solid 1px $success-color;
+        border-left-width: 7px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+}
+
+// .status-container{      
+//     margin-bottom: 15px;
+// }

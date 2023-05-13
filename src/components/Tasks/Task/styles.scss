@@ -1,0 +1,93 @@
+@import '../../styles/variables.scss';
+
+.task-component{
+    border: solid 1px $border-color;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    // breakpoint for xs
+    @include breakpoint-xs{
+        width: calc(50% - 2rem);
+        margin-right: 2rem;
+    }
+
+    // breakpoint for sm
+    @include breakpoint-sm{
+        width: calc(33.33% - 2rem);
+    }
+
+    //breakpoint for md
+    @include breakpoint-md{
+        width: calc(25% - 2rem);
+    }
+
+    h2{
+        margin: 0 0 1rem 0;
+        font-family: $title-font;
+        font-size: 28px;
+        font-weight: normal;
+        color: $primary-color;
+    }
+
+    #task-id{
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #9e9ea4;
+        
+    }
+
+    p{
+        .status-complete{
+            color: red;          
+            text-decoration: line-through;
+        }
+        
+    }
+
+    .description{ 
+       // border-top: solid 1px $border-color;        
+        
+        .function-buttons{             
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            border-top: solid 2px $border-color;
+            padding-top: 10px;
+
+            button{
+                border: none;
+                background-color: white;
+            }
+
+            svg{
+                margin-right: 10px;
+            }
+
+            #remove{
+                color: $danger-color;
+            }
+
+            #toggle{
+                background-color: white;
+            }
+
+            #task-status{
+                //Codes here
+                span.status-complete{
+                    color: $success-color;
+                }                
+            }
+        }
+        
+    }
+}
+
+// .status-complete{
+//     color: $success-color;
+//     //font-weight: bold;
+//     text-decoration: line-through;
+// }

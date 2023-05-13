@@ -1,0 +1,42 @@
+
+// Fonts
+$title-font: 'Lobster', Georgia;
+$body-font: 'Nunito', verdana;
+
+// Colors
+$primary-color: #3c6255;
+$secondary-color: #61876e;
+$background-color: #eae7b1;
+$border-color: #a6bb8d;
+$text-color: #443c68;
+$danger-color: #ff4949;
+$success-color: #54b435;
+$icon-color: rgb(132, 71, 124);
+
+// mixin for breakpoints generally.
+@mixin breakpoint($min-width){
+    @media only screen and (min-width: $min-width){
+        @content;
+    }
+}
+
+// mixin for xs breakpoint
+@mixin breakpoint-xs{
+    @include breakpoint(600px){
+        @content;
+    }
+}
+
+// mixin for sm breakpoint
+@mixin breakpoint-sm{
+    @include breakpoint(960px){
+        @content;
+    }
+}
+
+// mixin for md breakpoint
+@mixin breakpoint-md{
+    @include breakpoint(1280px){
+        @content;
+    }
+}

@@ -1,0 +1,30 @@
+@import '../styles/variables.scss';
+
+.task-list{
+    padding: 2rem;
+    background-color: $background-color;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint-xs{
+        padding-right: 0;
+    }
+
+    .clear-tasks {        
+        width: 100%;        
+
+        button{
+            display: block;
+            border: none;
+            background-color: $background-color;
+
+            // style the cleaner icon
+            svg{
+                margin-right: 5px;
+                margin-top: 10px;
+                font-size: 30px; 
+                color: $icon-color;                           
+            }
+        }
+    }
+}
